@@ -55,8 +55,8 @@ function App() {
 
   return (
     <>
-      <div className="PixelArt"></div>
-      <div className="Text">Uriel & Shulmit</div>
+      <div className="PixelArt" />
+      <div className="Text">Uriel & Shulamit</div>
       <img className="wifePic" src={img} />
       <div className="main">
         {weddingTasks.map((task) => {
