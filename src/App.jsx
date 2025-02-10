@@ -1,4 +1,5 @@
 import CheckBox from "./components/CheckBox";
+import img from "./assets/mywife.jpeg";
 
 function App() {
   const weddingTasks = [
@@ -56,6 +57,7 @@ function App() {
     <>
       <div className="PixelArt"></div>
       <div className="Text">Uriel & Shulmit</div>
+      <img className="wifePic" src={img} />
       <div className="main">
         {weddingTasks.map((task) => {
           return (
