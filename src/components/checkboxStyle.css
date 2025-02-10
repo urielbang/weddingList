@@ -150,51 +150,14 @@
 }
 
 /* Checked State */
-.neon-checkbox input:checked ~ .neon-checkbox__frame .neon-checkbox__box {
-  border-color: var(--primary);
-  background: rgba(0, 255, 170, 0.1);
-}
 
-.neon-checkbox input:checked ~ .neon-checkbox__frame .neon-checkbox__check {
+.show {
   stroke-dashoffset: 0;
   transform: scale(1.1);
-}
-
-.neon-checkbox input:checked ~ .neon-checkbox__frame .neon-checkbox__glow {
-  opacity: 0.2;
-}
-
-.neon-checkbox
-  input:checked
-  ~ .neon-checkbox__frame
-  .neon-checkbox__borders
-  span {
-  opacity: 1;
-}
-
-/* Particle Animations */
-.neon-checkbox
-  input:checked
-  ~ .neon-checkbox__frame
-  .neon-checkbox__particles
-  span {
-  animation: particleExplosion 0.6s ease-out forwards;
-}
-
-.neon-checkbox
-  input:checked
-  ~ .neon-checkbox__frame
-  .neon-checkbox__rings
-  .ring {
-  animation: ringPulse 0.6s ease-out forwards;
-}
-
-.neon-checkbox
-  input:checked
-  ~ .neon-checkbox__frame
-  .neon-checkbox__sparks
-  span {
-  animation: sparkFlash 0.6s ease-out forwards;
+  border-color: var(--primary);
+  background: rgba(0, 255, 170, 0.1);
+  stroke-dashoffset: 0;
+  transform: scale(1.1);
 }
 
 /* Animations */
