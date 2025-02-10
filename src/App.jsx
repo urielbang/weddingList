@@ -1,3 +1,5 @@
+import CheckBox from "./components/CheckBox";
+
 function App() {
   const weddingTasks = [
     { task: "קביעת תאריך", completed: false },
@@ -53,7 +55,17 @@ function App() {
   return (
     <>
       <div className="PixelArt"></div>
-      <div className="Text">Shulmit & Uriel</div>
+      <div className="Text">Uriel & Shulmit</div>
+      <div className="main">
+        {weddingTasks.map((task) => {
+          return (
+            <div className="row" key={task}>
+              <p className="taskText">{task.task}</p>
+              <CheckBox />
+            </div>
+          );
+        })}
+      </div>
     </>
   );
 }
