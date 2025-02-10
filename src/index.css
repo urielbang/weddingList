@@ -1,0 +1,124 @@
+@font-face {
+  font-family: "Pacifico";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/pacifico/v22/FwZY7-Qmy14u9lezJ-6H6Mw.ttf)
+    format("truetype");
+}
+body {
+  padding: 10px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  text-align: center;
+  height: 100vh;
+  background: #252233;
+  background: -webkit-radial-gradient(
+    center,
+    circle cover,
+    #3c3b52 0%,
+    #252233 30%
+  );
+  background: -moz-radial-gradient(
+    center,
+    circle cover,
+    #3c3b52 0%,
+    #252233 30%
+  );
+  background: radial-gradient(center, circle cover, #3c3b52 0%, #252233 30%);
+  animation: glow 1800ms infinite;
+  transition: background 500ms;
+  background-size: 100% 100%;
+  background-position: 50%;
+}
+.PixelArt {
+  width: 5px;
+  height: 5px;
+  margin-right: 5rem;
+  margin-top: 1rem;
+  animation: bump 1800ms infinite;
+  transform-origin: 48px 48px;
+  box-shadow: 0px 0px transparent, 0px 6px transparent, 0px 12px #ff3d7f,
+    0px 18px #ff3d7f, 0px 24px #ff3d7f, 0px 30px #ff3d7f, 6px 6px #ff3d7f,
+    6px 12px #ff3d7f, 6px 18px #ff3d7f, 6px 24px #ff3d7f, 6px 30px #ff3d7f,
+    6px 36px #ff3d7f, 12px 0px #ff3d7f, 12px 6px #ff3d7f, 12px 12px #ff3d7f,
+    12px 18px #eae7e2, 12px 24px #eae7e2, 12px 30px #ff3d7f, 12px 36px #ff3d7f,
+    12px 42px #ff3d7f, 18px 0px #ff3d7f, 18px 0px #ff3d7f, 18px 6px #ff3d7f,
+    18px 12px #eae7e2, 18px 18px #ff3d7f, 18px 24px #ff3d7f, 18px 30px #ff3d7f,
+    18px 36px #ff3d7f, 18px 42px #ff3d7f, 18px 48px #ff3d7f, 24px 0px #ff3d7f,
+    24px 6px #ff3d7f, 24px 12px #eae7e2, 24px 18px #ff3d7f, 24px 24px #ff3d7f,
+    24px 30px #ff3d7f, 24px 36px #ff3d7f, 24px 42px #ff3d7f, 24px 48px #ff3d7f,
+    24px 54px #ff3d7f, 30px 0px #ff3d7f, 30px 6px #ff3d7f, 30px 12px #ff3d7f,
+    30px 18px #ff3d7f, 30px 24px #ff3d7f, 30px 30px #ff3d7f, 30px 36px #ff3d7f,
+    30px 42px #ff3d7f, 30px 48px #ff3d7f, 30px 54px #ff3d7f, 30px 60px #ff3d7f,
+    36px 0px transparent, 36px 6px #ff3d7f, 36px 12px #ff3d7f, 36px 18px #ff3d7f,
+    36px 24px #ff3d7f, 36px 30px #ff3d7f, 36px 36px #ff3d7f, 36px 42px #ff3d7f,
+    36px 48px #ff3d7f, 36px 54px #ff3d7f, 36px 60px #ff3d7f, 36px 66px #ff3d7f,
+    42px 0px transparent, 42px 6px transparent, 42px 12px #ff3d7f,
+    42px 18px #ff3d7f, 42px 24px #ff3d7f, 42px 30px #ff3d7f, 42px 36px #ff3d7f,
+    42px 42px #ff3d7f, 42px 48px #ff3d7f, 42px 54px #ff3d7f, 42px 60px #ff3d7f,
+    42px 66px #ff3d7f, 42px 72px #ff3d7f, 48px 0px transparent, 48px 6px #ff3d7f,
+    48px 12px #ff3d7f, 48px 18px #ff3d7f, 48px 24px #ff3d7f, 48px 30px #ff3d7f,
+    48px 36px #ff3d7f, 48px 42px #ff3d7f, 48px 48px #ff3d7f, 48px 54px #ff3d7f,
+    48px 60px #ff3d7f, 48px 66px #ff3d7f, 54px 0px #ff3d7f, 54px 6px #ff3d7f,
+    54px 12px #ff3d7f, 54px 18px #ff3d7f, 54px 24px #ff3d7f, 54px 30px #ff3d7f,
+    54px 36px #ff3d7f, 54px 42px #ff3d7f, 54px 48px #ff3d7f, 54px 54px #ff3d7f,
+    54px 60px #ff3d7f, 60px 0px #ff3d7f, 60px 6px #ff3d7f, 60px 12px #ff3d7f,
+    60px 18px #ff3d7f, 60px 24px #ff3d7f, 60px 30px #ff3d7f, 60px 36px #ff3d7f,
+    60px 42px #ff3d7f, 60px 48px #ff3d7f, 60px 54px #ff3d7f, 66px 0px #ff3d7f,
+    66px 0px #ff3d7f, 66px 6px #ff3d7f, 66px 12px #ff3d7f, 66px 18px #ff3d7f,
+    66px 24px #ff3d7f, 66px 30px #ff3d7f, 66px 36px #ff3d7f, 66px 42px #ff3d7f,
+    66px 48px #ff3d7f, 72px 0px #ff3d7f, 72px 6px #ff3d7f, 72px 12px #ff3d7f,
+    72px 18px #ff3d7f, 72px 24px #ff3d7f, 72px 30px #ff3d7f, 72px 36px #ff3d7f,
+    72px 42px #ff3d7f, 78px 6px #ff3d7f, 78px 12px #ff3d7f, 78px 18px #ff3d7f,
+    78px 24px #ff3d7f, 78px 30px #ff3d7f, 78px 36px #ff3d7f,
+    84px 0px transparent, 84px 6px transparent, 84px 12px #ff3d7f,
+    84px 18px #ff3d7f, 84px 24px #ff3d7f, 84px 30px #ff3d7f;
+}
+@keyframes bump {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1.2);
+  }
+  30% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  60% {
+    transform: scale(1);
+  }
+}
+@keyframes glow {
+  0% {
+    background-size: 100% 100%;
+  }
+  20% {
+    background-size: 300% 300%;
+  }
+  30% {
+    background-size: 100% 100%;
+  }
+  50% {
+    background-size: 300% 300%;
+  }
+  60% {
+    background-size: 100% 100%;
+  }
+}
+.Text {
+  margin: 70px 0 0 0;
+  color: #fff;
+  z-index: 1;
+  position: absolute;
+  font-size: 3em;
+  font-family: "Pacifico", cursive;
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.8);
+  text-align: center;
+  width: 100%;
+  left: -2%;
+}
