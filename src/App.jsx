@@ -57,7 +57,7 @@ function App() {
   return (
     <>
       <div>
-        <audio src={song} controls autoPlay loop />
+        <audio src={song} controls autoPlay />
       </div>
       <div className="PixelArt" />
       <div className="Text">Uriel & Shulamit</div>

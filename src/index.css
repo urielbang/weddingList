@@ -13,13 +13,18 @@ body {
   background-color: #fff;
   text-align: center;
   height: 100vh;
-  background: #252233;
-  background: -webkit-radial-gradient(
+  /* background-image: url("./assets/subtle-prism.png");
+  background-size: cover; */
+  background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
+  /* background-repeat: no-repeat; */
+
+  /* background: #252233; */
+  /* background: -webkit-radial-gradient(
     center,
     circle cover,
-    #3c3b52 0%,
+    #f50fed 0%,
     #252233 30%
-  );
+  ); */
   background: -moz-radial-gradient(
     center,
     circle cover,
@@ -27,7 +32,7 @@ body {
     #252233 30%
   );
   background: radial-gradient(center, circle cover, #3c3b52 0%, #252233 30%);
-  animation: glow 1800ms infinite;
+  /* animation: glow 1800ms infinite; */
   transition: background 500ms;
   background-size: 100% 100%;
   background-position: 50%;
