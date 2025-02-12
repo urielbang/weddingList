@@ -1,5 +1,6 @@
 import CheckBox from "./components/CheckBox";
 import img from "./assets/mywife.jpeg";
+import song from "./assets/song.mp3";
 
 function App() {
   const weddingTasks = [
@@ -55,6 +56,9 @@ function App() {
 
   return (
     <>
+      <div>
+        <audio src={song} controls autoPlay loop />
+      </div>
       <div className="PixelArt" />
       <div className="Text">Uriel & Shulamit</div>
       <img className="wifePic" src={img} />
