@@ -1,22 +1,31 @@
 import { useState } from "react";
 import "./checkboxStyle.css";
 
-export default function CheckBox() {
+export default function CheckBox({ showV, click }) {
   const [show, setShow] = useState(false);
 
   const handleToggle = () => {
     setShow((prev) => !prev);
   };
+  let classV = false;
+
+  if (showV && !show) {
+    classV = "show";
+  } else if (show && !showV) {
+    classV = "show";
+  } else {
+    classV = "";
+  }
 
   return (
     <label className="neon-checkbox" tabIndex="0">
       <input type="checkbox" checked={show} onChange={handleToggle} />
-      <div className={`neon-checkbox__frame ${show ? "show" : ""}`}>
+      <div onClick={click} className={`neon-checkbox__frame ${classV}`}>
         <div className="neon-checkbox__box">
           <div className="neon-checkbox__check-container">
             <svg
               viewBox="0 0 24 24"
-              className={`neon-checkbox__check ${show ? "show" : ""}`}
+              className={`neon-checkbox__check ${showV || show ? "show" : ""}`}
             >
               <path d="M3,12.5l7,7L21,5" />
             </svg>
