@@ -54,10 +54,7 @@ function App() {
     { task: "וידוא שכל הציוד הנדרש נמצא במקום האירוע", completed: false },
   ];
 
-  const handleClick = () => {
-    // console.log(index);
-    console.log("======");
-  };
+  const handleClick = () => {};
 
   return (
     <>
@@ -68,11 +65,11 @@ function App() {
       <div className="Text">Uriel & Shulamit</div>
       <img className="wifePic" src={img} />
       <div className="main">
-        {weddingTasks.map((task, index) => {
+        {weddingTasks.map((task) => {
           return (
             <div className="row" key={task}>
               <p className="taskText">{task.task}</p>
-              <CheckBox ifClick={handleClick} />
+              <CheckBox click={handleClick} />
             </div>
           );
         })}

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./checkboxStyle.css";
 
-export default function CheckBox({ ifClick }) {
+export default function CheckBox({ click }) {
   const [show, setShow] = useState(false);
 
   const handleToggle = () => {
@@ -9,8 +9,13 @@ export default function CheckBox({ ifClick }) {
   };
 
   return (
-    <label className="neon-checkbox" tabIndex="0" onClick={ifClick}>
-      <input type="checkbox" checked={show} onChange={handleToggle} />
+    <label className="neon-checkbox" tabIndex="0">
+      <input
+        type="checkbox"
+        checked={show}
+        onChange={handleToggle}
+        onClick={click}
+      />
       <div className={`neon-checkbox__frame ${show ? "show" : ""}`}>
         <div className="neon-checkbox__box">
           <div className="neon-checkbox__check-container">
