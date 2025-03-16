@@ -3,6 +3,7 @@ import img from "./assets/mywife.jpeg";
 import song from "./assets/song.mp3";
 import { useState } from "react";
 import { useEffect } from "react";
+import { use } from "react";
 
 function App() {
   const [indexTasks, setIndexTasks] = useState([]);
@@ -57,17 +58,27 @@ function App() {
     { task: "וידוא שכל הציוד הנדרש נמצא במקום האירוע", completed: false },
   ];
 
+  useEffect(() => {
+    console.log(localStorage.getItem("tasksIndex"));
+  }, []);
+
   const handleClick = (index) => {
     setIndexTasks((prevArr) => [index, ...prevArr]);
 
-    // let localStorageData = localStorage.getItem("task") || [];
+    // if (indexTasks.length === 0) {
+    //   localStorage.setItem("tasksIndex", [index]);
+    // } else {
 
-    // let newData = localStorage.getItem("tasks");
-    // console.log(newData);
+    if (!indexTasks.length) {
+      localStorage.setItem("tasksIndex", [index]);
+    }
+
+    if (indexTasks.length > 0) {
+      localStorage.setItem("tasksIndex", indexTasks);
+    }
+
+    // }
   };
-  useEffect(() => {
-    localStorage.setItem("tasksIndex", indexTasks);
-  }, [indexTasks]);
 
   return (
     <>
