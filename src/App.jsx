@@ -1,8 +1,11 @@
 import CheckBox from "./components/CheckBox";
 import img from "./assets/mywife.jpeg";
 import song from "./assets/song.mp3";
+import { useState } from "react";
+import { useEffect } from "react";
 
 function App() {
+  const [indexTasks, setIndexTasks] = useState([]);
   const weddingTasks = [
     { task: "קביעת תאריך", completed: false },
     { task: "לוודא שרב מחתן בתאריך", completed: false },
@@ -54,7 +57,17 @@ function App() {
     { task: "וידוא שכל הציוד הנדרש נמצא במקום האירוע", completed: false },
   ];
 
-  const handleClick = () => {};
+  const handleClick = (index) => {
+    setIndexTasks((prevArr) => [index, ...prevArr]);
+
+    // let localStorageData = localStorage.getItem("task") || [];
+
+    // let newData = localStorage.getItem("tasks");
+    // console.log(newData);
+  };
+  useEffect(() => {
+    localStorage.setItem("tasksIndex", indexTasks);
+  }, [indexTasks]);
 
   return (
     <>
@@ -65,11 +78,11 @@ function App() {
       <div className="Text">Uriel & Shulamit</div>
       <img className="wifePic" src={img} />
       <div className="main">
-        {weddingTasks.map((task) => {
+        {weddingTasks.map((task, index) => {
           return (
             <div className="row" key={task}>
               <p className="taskText">{task.task}</p>
-              <CheckBox click={handleClick} />
+              <CheckBox click={() => handleClick(index)} />
             </div>
           );
         })}
