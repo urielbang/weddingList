@@ -43,7 +43,6 @@ function App() {
     { task: "וידוא זמינות כל המברכים בחופה", completed: false },
     { task: "וידוא זמינות ומספר הגביעים לברכה", completed: false },
     { task: "וידוא נוכחות כל האורחים מהמשפחה הקרובה", completed: false },
-    { task: "תכנון וסידור מקומות ישיבה באולם", completed: false },
     { task: "וידוא הכנת אוכל לזוג ללילה הראשון", completed: false },
     { task: "תיאום לינה ללילה הראשון (בית מלון / צימר)", completed: false },
     {
