@@ -53,7 +53,7 @@ function App() {
     { task: "תיאום וסגירת תשלום עם הספקים השונים", completed: false },
     { task: "וידוא שהצילום יתבצע לפי תכנון מוקדם", completed: false },
     { task: "ארגון מתנות לאורחים ולמשפחה", completed: false },
-    { task: "וידוא שכל הציוד הנדרש נמצא במקום האירוע", completed: false },
+    // { task: "וידוא שכל הציוד הנדרש נמצא במקום האירוע", completed: false },
   ];
 
   const handleClick = (index) => {
