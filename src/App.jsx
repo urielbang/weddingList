@@ -4,8 +4,11 @@ import song from "./assets/song.mp3";
 import { useState } from "react";
 import { useEffect } from "react";
 
+let allTasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
 function App() {
-  const [indexTasks, setIndexTasks] = useState([]);
+  const [indexTasks, setIndexTasks] = useState(allTasks);
+  const [show, setShow] = useState(false);
   const weddingTasks = [
     { task: "קביעת תאריך", completed: false },
     { task: "לוודא שרב מחתן בתאריך", completed: false },
@@ -57,20 +60,19 @@ function App() {
   ];
 
   const handleClick = (index) => {
-    setIndexTasks((prevArr) => [index, ...prevArr]);
+    setIndexTasks((prevTask) => [...prevTask, index]);
+    // let showOrNot = indexTasks.includes(index);
+    // setShow(showOrNot);
   };
 
   useEffect(() => {
-    let indexes = JSON.parse(localStorage.getItem("tasksIndex")) || [];
-
-    if (!indexes.length) {
-      setIndexTasks(indexes);
-    }
-  }, []);
+    localStorage.setItem("tasks", JSON.stringify(indexTasks));
+  }, [indexTasks]);
 
   useEffect(() => {
-    localStorage.setItem("tasksIndex", indexTasks);
-  }, [indexTasks]);
+    console.log(allTasks);
+  }, []);
+
   return (
     <>
       <div>
@@ -82,9 +84,9 @@ function App() {
       <div className="main">
         {weddingTasks.map((task, index) => {
           return (
-            <div className="row" key={task}>
+            <div className="row" key={index}>
               <p className="taskText">{task.task}</p>
-              <CheckBox click={() => handleClick(index)} />
+              <CheckBox click={() => handleClick(index)} dontShow={show} />
             </div>
           );
         })}
