@@ -59,7 +59,13 @@ function App() {
   ];
 
   const handleClick = (index) => {
-    setIndexTasks((prevTask) => [...prevTask, index]);
+    let isAnotherClick = indexTasks.includes(index);
+    if (isAnotherClick) {
+      let updatedTasks = indexTasks.filter((task) => task !== index);
+      setIndexTasks(updatedTasks);
+    } else {
+      setIndexTasks((prevTask) => [...prevTask, index]);
+    }
   };
 
   useEffect(() => {

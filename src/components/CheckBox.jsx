@@ -1,21 +1,9 @@
-import { useState } from "react";
 import "./checkboxStyle.css";
 
 export default function CheckBox({ click, dontShow }) {
-  const [show, setShow] = useState(false);
-
-  const handleToggle = () => {
-    setShow((prev) => !prev);
-  };
-
   return (
     <label className="neon-checkbox" tabIndex="0">
-      <input
-        type="checkbox"
-        checked={dontShow}
-        onChange={handleToggle}
-        onClick={click}
-      />
+      <input type="checkbox" checked={dontShow} onClick={click} />
       <div className={`neon-checkbox__frame ${dontShow ? "show" : ""}`}>
         <div className="neon-checkbox__box">
           <div className="neon-checkbox__check-container">
