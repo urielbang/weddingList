@@ -16,12 +16,12 @@ export default function CheckBox({ click, dontShow }) {
         onChange={handleToggle}
         onClick={click}
       />
-      <div className={`neon-checkbox__frame ${show ? "show" : ""}`}>
+      <div className={`neon-checkbox__frame ${dontShow ? "show" : ""}`}>
         <div className="neon-checkbox__box">
           <div className="neon-checkbox__check-container">
             <svg
               viewBox="0 0 24 24"
-              className={`neon-checkbox__check ${show ? "show" : ""}`}
+              className={`neon-checkbox__check ${dontShow ? "show" : ""}`}
             >
               <path d="M3,12.5l7,7L21,5" />
             </svg>

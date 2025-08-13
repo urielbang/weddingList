@@ -8,7 +8,6 @@ let allTasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
 function App() {
   const [indexTasks, setIndexTasks] = useState(allTasks);
-  const [show, setShow] = useState(false);
   const weddingTasks = [
     { task: "קביעת תאריך", completed: false },
     { task: "לוודא שרב מחתן בתאריך", completed: false },
@@ -61,17 +60,11 @@ function App() {
 
   const handleClick = (index) => {
     setIndexTasks((prevTask) => [...prevTask, index]);
-    // let showOrNot = indexTasks.includes(index);
-    // setShow(showOrNot);
   };
 
   useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(indexTasks));
   }, [indexTasks]);
-
-  useEffect(() => {
-    console.log(allTasks);
-  }, []);
 
   return (
     <>
@@ -83,10 +76,11 @@ function App() {
       <img className="wifePic" src={img} />
       <div className="main">
         {weddingTasks.map((task, index) => {
+          let showTask = indexTasks.includes(index);
           return (
             <div className="row" key={index}>
               <p className="taskText">{task.task}</p>
-              <CheckBox click={() => handleClick(index)} dontShow={show} />
+              <CheckBox click={() => handleClick(index)} dontShow={showTask} />
             </div>
           );
         })}
